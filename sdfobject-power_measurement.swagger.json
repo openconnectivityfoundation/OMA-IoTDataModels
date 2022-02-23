@@ -1,0 +1,239 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OMA/IPSO Power Measurement (Object ID 3305)",
+    "version": "2022-02-22",
+    "license": {
+      "name": "one Data Model License",
+      "url": "BSD-3-Clause",
+      "x-copyright": "Copyright 2019 Open Mobile Alliance."
+    },
+    "termsOfService": "BSD-3-Clause"
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Omaipsopowermeasurementobjectid3305ResURI": {
+      "get": {
+        "description": " This IPSO object should be used over a power measurement sensor to report a remote power measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. It also provides resources for cumulative energy, calibration, and the power factor.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/interface"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Omaipsopowermeasurementobjectid3305"
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "interface": {
+      "in": "query",
+      "name": "if",
+      "type": "string",
+      "enum": [
+        "oic.if.s",
+        "oic.if.baseline"
+      ]
+    }
+  },
+  "definitions": {
+    "Omaipsopowermeasurementobjectid3305": {
+      "properties": {
+        "rt": {
+          "description": "The Resource Type.",
+          "items": {
+            "enum": [
+              "oic.r.o.Power_Measurement"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "n": {
+          "$ref": "https://openconnectivityfoundation.github.io/core/schemas/oic.common.properties.core-schema.json#/definitions/n"
+        },
+        "if": {
+          "description": "The OCF Interface set supported by this Resource.",
+          "items": {
+            "enum": [
+              "oic.if.s",
+              "oic.if.baseline"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "Instantaneous_active_power": {
+          "description": "The current active power.",
+          "x-label": "Instantaneous active power",
+          "type": "number",
+          "unit": "W",
+          "readOnly": true
+        },
+        "Min_Measured_active_power": {
+          "description": "The minimum active power measured by the sensor since it is ON.",
+          "x-label": "Min Measured active power",
+          "type": "number",
+          "unit": "W",
+          "readOnly": true
+        },
+        "Max_Measured_active_power": {
+          "description": "The maximum active power measured by the sensor since it is ON.",
+          "x-label": "Max Measured active power",
+          "type": "number",
+          "unit": "W",
+          "readOnly": true
+        },
+        "Min_Range_active_power": {
+          "description": "The minimum active power that can be measured by the sensor.",
+          "x-label": "Min Range active power",
+          "type": "number",
+          "unit": "W",
+          "readOnly": true
+        },
+        "Max_Range_active_power": {
+          "description": "The maximum active power that can be measured by the sensor.",
+          "x-label": "Max Range active power",
+          "type": "number",
+          "unit": "W",
+          "readOnly": true
+        },
+        "Cumulative_active_power": {
+          "description": "The cumulative active power since the last cumulative energy reset or device start.",
+          "x-label": "Cumulative active power",
+          "type": "number",
+          "unit": "Wh",
+          "readOnly": true
+        },
+        "Active_Power_Calibration": {
+          "description": "Request an active power calibration by writing the value of a calibrated load.",
+          "x-label": "Active Power Calibration",
+          "x-readable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Instantaneous_reactive_power": {
+          "description": "The current reactive power.",
+          "x-label": "Instantaneous reactive power",
+          "type": "number",
+          "unit": "var",
+          "readOnly": true
+        },
+        "Min_Measured_reactive_power": {
+          "description": "The minimum reactive power measured by the sensor since it is ON.",
+          "x-label": "Min Measured reactive power",
+          "type": "number",
+          "unit": "var",
+          "readOnly": true
+        },
+        "Max_Measured_reactive_power": {
+          "description": "The maximum reactive power measured by the sensor since it is ON.",
+          "x-label": "Max Measured reactive power",
+          "type": "number",
+          "unit": "var",
+          "readOnly": true
+        },
+        "Min_Range_reactive_power": {
+          "description": "The minimum active power that can be measured by the sensor.",
+          "x-label": "Min Range reactive power",
+          "type": "number",
+          "unit": "var",
+          "readOnly": true
+        },
+        "Max_Range_reactive_power": {
+          "description": "The maximum reactive power that can be measured by the sensor.",
+          "x-label": "Max Range reactive power",
+          "type": "number",
+          "unit": "var",
+          "readOnly": true
+        },
+        "Cumulative_reactive_power": {
+          "description": "The cumulative reactive power since the last cumulative energy reset or device start.",
+          "x-label": "Cumulative reactive power",
+          "type": "number",
+          "unit": "varh",
+          "readOnly": true
+        },
+        "Reactive_Power_Calibration": {
+          "description": "Request a reactive power calibration by writing the value of a calibrated load.",
+          "x-label": "Reactive Power Calibration",
+          "x-readable": false,
+          "type": "number",
+          "unit": "var"
+        },
+        "Power_factor": {
+          "description": "If applicable, the power factor of the current consumption.",
+          "x-label": "Power factor",
+          "type": "number",
+          "readOnly": true
+        },
+        "Current_Calibration": {
+          "description": "Read or Write the current calibration coefficient.",
+          "x-label": "Current Calibration",
+          "type": "number"
+        },
+        "Application_Type": {
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "x-label": "Application Type",
+          "type": "string"
+        },
+        "Timestamp": {
+          "description": "The timestamp of when the measurement was performed.",
+          "x-label": "Timestamp",
+          "x-sdfType": "unix-time",
+          "type": "number",
+          "readOnly": true
+        },
+        "Fractional_Timestamp": {
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "x-label": "Fractional Timestamp",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number",
+          "unit": "s",
+          "readOnly": true
+        },
+        "Measurement_Quality_Indicator": {
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "x-label": "Measurement Quality Indicator",
+          "maximum": 23,
+          "minimum": 0,
+          "type": "integer",
+          "readOnly": true
+        },
+        "Measurement_Quality_Level": {
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "x-label": "Measurement Quality Level",
+          "maximum": 100,
+          "minimum": 0,
+          "type": "integer",
+          "readOnly": true
+        }
+      },
+      "type": "object",
+      "required": [
+        "Instantaneous_active_power"
+      ]
+    }
+  }
+}

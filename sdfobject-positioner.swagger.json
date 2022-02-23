@@ -1,0 +1,159 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OMA/IPSO Positioner (Object ID 3337)",
+    "version": "2022-02-22",
+    "license": {
+      "name": "one Data Model License",
+      "url": "BSD-3-Clause",
+      "x-copyright": "Copyright 2019 Open Mobile Alliance."
+    },
+    "termsOfService": "BSD-3-Clause"
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Omaipsopositionerobjectid3337ResURI": {
+      "get": {
+        "description": " This IPSO object should be used with a generic position actuator with range from 0 to 100%. This object optionally allows setting the transition time for an operation that changes the position of the actuator, and for reading the remaining time of the currently active transition.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/interface"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Omaipsopositionerobjectid3337"
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "interface": {
+      "in": "query",
+      "name": "if",
+      "type": "string",
+      "enum": [
+        "oic.if.s",
+        "oic.if.baseline"
+      ]
+    }
+  },
+  "definitions": {
+    "Omaipsopositionerobjectid3337": {
+      "properties": {
+        "rt": {
+          "description": "The Resource Type.",
+          "items": {
+            "enum": [
+              "oic.r.o.Positioner"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "n": {
+          "$ref": "https://openconnectivityfoundation.github.io/core/schemas/oic.common.properties.core-schema.json#/definitions/n"
+        },
+        "if": {
+          "description": "The OCF Interface set supported by this Resource.",
+          "items": {
+            "enum": [
+              "oic.if.s",
+              "oic.if.baseline"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "Current_Position": {
+          "description": "Current position or desired position of a positioner actuator.",
+          "x-label": "Current Position",
+          "maximum": 100,
+          "minimum": 0,
+          "type": "number",
+          "unit": "/100"
+        },
+        "Transition_Time": {
+          "description": "The time expected to move the actuator to the new position.",
+          "x-label": "Transition Time",
+          "type": "number",
+          "unit": "s"
+        },
+        "Remaining_Time": {
+          "description": "The time remaining in an operation.",
+          "x-label": "Remaining Time",
+          "type": "number",
+          "unit": "s",
+          "readOnly": true
+        },
+        "Min_Measured_Value": {
+          "description": "The minimum value measured by the sensor since power ON or reset.",
+          "x-label": "Min Measured Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Max_Measured_Value": {
+          "description": "The maximum value measured by the sensor since power ON or reset.",
+          "x-label": "Max Measured Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Min_Limit": {
+          "description": "The minimum value that can be measured by the sensor.",
+          "x-label": "Min Limit",
+          "type": "number",
+          "readOnly": true
+        },
+        "Max_Limit": {
+          "description": "The maximum value that can be measured by the sensor.",
+          "x-label": "Max Limit",
+          "type": "number",
+          "readOnly": true
+        },
+        "Application_Type": {
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "x-label": "Application Type",
+          "type": "string"
+        },
+        "Timestamp": {
+          "description": "The timestamp of when the measurement was performed.",
+          "x-label": "Timestamp",
+          "x-sdfType": "unix-time",
+          "type": "number",
+          "readOnly": true
+        },
+        "Fractional_Timestamp": {
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "x-label": "Fractional Timestamp",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number",
+          "unit": "s",
+          "readOnly": true
+        }
+      },
+      "type": "object",
+      "required": [
+        "Current_Position"
+      ]
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OMA/IPSO Location (Object ID 3336)",
+    "version": "2022-02-22",
+    "license": {
+      "name": "one Data Model License",
+      "url": "BSD-3-Clause",
+      "x-copyright": "Copyright 2021 Open Mobile Alliance."
+    },
+    "termsOfService": "BSD-3-Clause"
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Omaipsolocationobjectid3336ResURI": {
+      "get": {
+        "description": " This IPSO object represents GPS coordinates. This object is compatible with the LwM2M management object for location, but uses reusable resources.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/interface"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Omaipsolocationobjectid3336"
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "interface": {
+      "in": "query",
+      "name": "if",
+      "type": "string",
+      "enum": [
+        "oic.if.s",
+        "oic.if.baseline"
+      ]
+    }
+  },
+  "definitions": {
+    "Omaipsolocationobjectid3336": {
+      "properties": {
+        "rt": {
+          "description": "The Resource Type.",
+          "items": {
+            "enum": [
+              "oic.r.o.Location"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "n": {
+          "$ref": "https://openconnectivityfoundation.github.io/core/schemas/oic.common.properties.core-schema.json#/definitions/n"
+        },
+        "if": {
+          "description": "The OCF Interface set supported by this Resource.",
+          "items": {
+            "enum": [
+              "oic.if.s",
+              "oic.if.baseline"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "Numeric_Latitude": {
+          "description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).",
+          "x-label": "Numeric Latitude",
+          "type": "number",
+          "unit": "lat",
+          "readOnly": true
+        },
+        "Numeric_Longitude": {
+          "description": "The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).",
+          "x-label": "Numeric Longitude",
+          "type": "number",
+          "unit": "lon",
+          "readOnly": true
+        },
+        "Numeric_Uncertainty": {
+          "description": "The accuracy of the position in meters.",
+          "x-label": "Numeric Uncertainty",
+          "type": "number",
+          "unit": "m",
+          "readOnly": true
+        },
+        "Compass_Direction": {
+          "description": "The measured compass direction.",
+          "x-label": "Compass Direction",
+          "maximum": 360,
+          "minimum": 0,
+          "type": "number",
+          "unit": "deg",
+          "readOnly": true
+        },
+        "Velocity": {
+          "description": "The velocity of the device as defined in 3GPP 23.032 GAD specification. This set of values may not be available if the device is static.",
+          "x-label": "Velocity",
+          "x-sdfType": "byte-string",
+          "type": "string",
+          "readOnly": true
+        },
+        "Timestamp": {
+          "description": "The timestamp of when the measurement was performed.",
+          "x-label": "Timestamp",
+          "x-sdfType": "unix-time",
+          "type": "number",
+          "readOnly": true
+        },
+        "Application_Type": {
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "x-label": "Application Type",
+          "type": "string"
+        },
+        "Fractional_Timestamp": {
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "x-label": "Fractional Timestamp",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number",
+          "unit": "s",
+          "readOnly": true
+        },
+        "Measurement_Quality_Indicator": {
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "x-label": "Measurement Quality Indicator",
+          "maximum": 23,
+          "minimum": 0,
+          "type": "integer",
+          "readOnly": true
+        },
+        "Measurement_Quality_Level": {
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "x-label": "Measurement Quality Level",
+          "maximum": 100,
+          "minimum": 0,
+          "type": "integer",
+          "readOnly": true
+        }
+      },
+      "type": "object",
+      "required": [
+        "Numeric_Latitude",
+        "Numeric_Longitude"
+      ]
+    }
+  }
+}
