@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Up_Down_Control"
+              "oic.r.o.up.down.control"
             ],
             "type": "string"
           },

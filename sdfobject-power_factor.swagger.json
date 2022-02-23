@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Power_Factor"
+              "oic.r.o.power.factor"
             ],
             "type": "string"
           },

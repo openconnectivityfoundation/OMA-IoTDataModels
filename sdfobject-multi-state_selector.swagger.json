@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Multi-state_Selector"
+              "oic.r.o.multi-state.selector"
             ],
             "type": "string"
           },

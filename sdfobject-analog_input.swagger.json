@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Analog_Input"
+              "oic.r.o.analog.input"
             ],
             "type": "string"
           },

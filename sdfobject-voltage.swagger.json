@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Voltage"
+              "oic.r.o.voltage"
             ],
             "type": "string"
           },

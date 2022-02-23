@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Pressure"
+              "oic.r.o.pressure"
             ],
             "type": "string"
           },
