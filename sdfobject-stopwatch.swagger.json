@@ -87,7 +87,7 @@
           "description": "The total time in seconds that the timer input is true. Writing a 0 resets the time.",
           "x-label": "Cumulative Time",
           "type": "number",
-          "unit": "s"
+          "x-unit": "s"
         },
         "On_Off": {
           "description": "On/off control. Boolean value where True is On and False is Off.",
@@ -118,7 +118,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         },
         "Measurement_Quality_Indicator": {

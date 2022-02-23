@@ -98,7 +98,7 @@
           "description": "The duration of the event in minutes.",
           "x-label": "Duration In Min",
           "type": "integer",
-          "unit": "min"
+          "x-unit": "min"
         },
         "Criticality_Level": {
           "description": "The criticality of the event. The device receiving the event will react in an appropriate fashion for the device.",
@@ -113,7 +113,7 @@
           "maximum": 100,
           "minimum": 0,
           "type": "integer",
-          "unit": "/100"
+          "x-unit": "/100"
         },
         "Duty_Cycle": {
           "description": "Defines the duty cycle for the load control event, i.e, what percentage of time the receiving device is allowed to be on.",
@@ -121,7 +121,7 @@
           "maximum": 100,
           "minimum": 0,
           "type": "integer",
-          "unit": "/100"
+          "x-unit": "/100"
         },
         "Application_Type": {
           "description": "The application type of the sensor or actuator as a string depending on the use case.",
@@ -141,7 +141,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         }
       },

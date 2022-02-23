@@ -87,42 +87,42 @@
           "description": "The current active power.",
           "x-label": "Instantaneous active power",
           "type": "number",
-          "unit": "W",
+          "x-unit": "W",
           "readOnly": true
         },
         "Min_Measured_active_power": {
           "description": "The minimum active power measured by the sensor since it is ON.",
           "x-label": "Min Measured active power",
           "type": "number",
-          "unit": "W",
+          "x-unit": "W",
           "readOnly": true
         },
         "Max_Measured_active_power": {
           "description": "The maximum active power measured by the sensor since it is ON.",
           "x-label": "Max Measured active power",
           "type": "number",
-          "unit": "W",
+          "x-unit": "W",
           "readOnly": true
         },
         "Min_Range_active_power": {
           "description": "The minimum active power that can be measured by the sensor.",
           "x-label": "Min Range active power",
           "type": "number",
-          "unit": "W",
+          "x-unit": "W",
           "readOnly": true
         },
         "Max_Range_active_power": {
           "description": "The maximum active power that can be measured by the sensor.",
           "x-label": "Max Range active power",
           "type": "number",
-          "unit": "W",
+          "x-unit": "W",
           "readOnly": true
         },
         "Cumulative_active_power": {
           "description": "The cumulative active power since the last cumulative energy reset or device start.",
           "x-label": "Cumulative active power",
           "type": "number",
-          "unit": "Wh",
+          "x-unit": "Wh",
           "readOnly": true
         },
         "Active_Power_Calibration": {
@@ -130,48 +130,48 @@
           "x-label": "Active Power Calibration",
           "x-readable": false,
           "type": "number",
-          "unit": "W"
+          "x-unit": "W"
         },
         "Instantaneous_reactive_power": {
           "description": "The current reactive power.",
           "x-label": "Instantaneous reactive power",
           "type": "number",
-          "unit": "var",
+          "x-unit": "var",
           "readOnly": true
         },
         "Min_Measured_reactive_power": {
           "description": "The minimum reactive power measured by the sensor since it is ON.",
           "x-label": "Min Measured reactive power",
           "type": "number",
-          "unit": "var",
+          "x-unit": "var",
           "readOnly": true
         },
         "Max_Measured_reactive_power": {
           "description": "The maximum reactive power measured by the sensor since it is ON.",
           "x-label": "Max Measured reactive power",
           "type": "number",
-          "unit": "var",
+          "x-unit": "var",
           "readOnly": true
         },
         "Min_Range_reactive_power": {
           "description": "The minimum active power that can be measured by the sensor.",
           "x-label": "Min Range reactive power",
           "type": "number",
-          "unit": "var",
+          "x-unit": "var",
           "readOnly": true
         },
         "Max_Range_reactive_power": {
           "description": "The maximum reactive power that can be measured by the sensor.",
           "x-label": "Max Range reactive power",
           "type": "number",
-          "unit": "var",
+          "x-unit": "var",
           "readOnly": true
         },
         "Cumulative_reactive_power": {
           "description": "The cumulative reactive power since the last cumulative energy reset or device start.",
           "x-label": "Cumulative reactive power",
           "type": "number",
-          "unit": "varh",
+          "x-unit": "varh",
           "readOnly": true
         },
         "Reactive_Power_Calibration": {
@@ -179,7 +179,7 @@
           "x-label": "Reactive Power Calibration",
           "x-readable": false,
           "type": "number",
-          "unit": "var"
+          "x-unit": "var"
         },
         "Power_factor": {
           "description": "If applicable, the power factor of the current consumption.",
@@ -210,7 +210,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         },
         "Measurement_Quality_Indicator": {

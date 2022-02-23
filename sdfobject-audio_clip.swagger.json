@@ -95,13 +95,13 @@
           "maximum": 100,
           "minimum": 0,
           "type": "number",
-          "unit": "/100"
+          "x-unit": "/100"
         },
         "Duration": {
           "description": "The duration of the sound once trigger.",
           "x-label": "Duration",
           "type": "number",
-          "unit": "s"
+          "x-unit": "s"
         },
         "Application_Type": {
           "description": "The application type of the sensor or actuator as a string depending on the use case.",

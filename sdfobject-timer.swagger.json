@@ -87,20 +87,20 @@
           "description": "The duration of the time delay.",
           "x-label": "Delay Duration",
           "type": "number",
-          "unit": "s"
+          "x-unit": "s"
         },
         "Remaining_Time": {
           "description": "The time remaining in an operation.",
           "x-label": "Remaining Time",
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         },
         "Minimum_Off-time": {
           "description": "The duration of the rearm delay (i.e. the delay from the end of one cycle until the beginning of the next, the inhibit time).",
           "x-label": "Minimum Off-time",
           "type": "number",
-          "unit": "s"
+          "x-unit": "s"
         },
         "On_Off": {
           "description": "On/off control. Boolean value where True is On and False is Off.",
@@ -117,7 +117,7 @@
           "description": "The total time in seconds that the timer input is true. Writing a 0 resets the time.",
           "x-label": "Cumulative Time",
           "type": "number",
-          "unit": "s"
+          "x-unit": "s"
         },
         "Digital_State": {
           "description": "The current state of the timer output.",

@@ -107,7 +107,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         }
       },

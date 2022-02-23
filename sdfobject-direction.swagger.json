@@ -89,7 +89,7 @@
           "maximum": 360,
           "minimum": 0,
           "type": "number",
-          "unit": "deg",
+          "x-unit": "deg",
           "readOnly": true
         },
         "Min_Measured_Value": {
@@ -122,7 +122,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         },
         "Measurement_Quality_Indicator": {

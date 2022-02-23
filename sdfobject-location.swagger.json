@@ -87,21 +87,21 @@
           "description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).",
           "x-label": "Numeric Latitude",
           "type": "number",
-          "unit": "lat",
+          "x-unit": "lat",
           "readOnly": true
         },
         "Numeric_Longitude": {
           "description": "The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).",
           "x-label": "Numeric Longitude",
           "type": "number",
-          "unit": "lon",
+          "x-unit": "lon",
           "readOnly": true
         },
         "Numeric_Uncertainty": {
           "description": "The accuracy of the position in meters.",
           "x-label": "Numeric Uncertainty",
           "type": "number",
-          "unit": "m",
+          "x-unit": "m",
           "readOnly": true
         },
         "Compass_Direction": {
@@ -110,7 +110,7 @@
           "maximum": 360,
           "minimum": 0,
           "type": "number",
-          "unit": "deg",
+          "x-unit": "deg",
           "readOnly": true
         },
         "Velocity": {
@@ -138,7 +138,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         },
         "Measurement_Quality_Indicator": {

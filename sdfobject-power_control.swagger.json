@@ -94,19 +94,19 @@
           "maximum": 100,
           "minimum": 0,
           "type": "integer",
-          "unit": "/100"
+          "x-unit": "/100"
         },
         "On_time": {
           "description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter.",
           "x-label": "On time",
           "type": "integer",
-          "unit": "s"
+          "x-unit": "s"
         },
         "Cumulative_active_power": {
           "description": "The cumulative active power since the last cumulative energy reset or device start.",
           "x-label": "Cumulative active power",
           "type": "number",
-          "unit": "Wh",
+          "x-unit": "Wh",
           "readOnly": true
         },
         "Power_factor": {
@@ -133,7 +133,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         }
       },

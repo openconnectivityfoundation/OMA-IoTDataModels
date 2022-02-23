@@ -104,7 +104,7 @@
           "description": "The debounce period in ms.",
           "x-label": "Digital Input Debounce",
           "type": "integer",
-          "unit": "ms"
+          "x-unit": "ms"
         },
         "Digital_Input_Edge_Selection": {
           "description": "The edge selection as an integer (1 = Falling edge, 2 = Rising edge, 3 = Both Rising and Falling edge).",
@@ -137,7 +137,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         }
       },

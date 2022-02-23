@@ -95,7 +95,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s"
+          "x-unit": "s"
         },
         "Application_Type": {
           "description": "The application type of the sensor or actuator as a string depending on the use case.",

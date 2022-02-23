@@ -105,13 +105,13 @@
           "description": "Delay from the detection state to the clear state in ms.",
           "x-label": "Busy to Clear delay",
           "type": "integer",
-          "unit": "ms"
+          "x-unit": "ms"
         },
         "Clear_to_Busy_delay": {
           "description": "Delay from the clear state to the busy state in ms.",
           "x-label": "Clear to Busy delay",
           "type": "integer",
-          "unit": "ms"
+          "x-unit": "ms"
         },
         "Application_Type": {
           "description": "The application type of the sensor or actuator as a string depending on the use case.",
@@ -131,7 +131,7 @@
           "maximum": 1,
           "minimum": 0,
           "type": "number",
-          "unit": "s",
+          "x-unit": "s",
           "readOnly": true
         },
         "Measurement_Quality_Indicator": {
