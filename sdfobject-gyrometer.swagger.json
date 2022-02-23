@@ -1,0 +1,202 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OMA/IPSO Gyrometer (Object ID 3334)",
+    "version": "2022-02-22",
+    "license": {
+      "name": "one Data Model License",
+      "url": "BSD-3-Clause",
+      "x-copyright": "Copyright 2019 Open Mobile Alliance."
+    },
+    "termsOfService": "BSD-3-Clause"
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Omaipsogyrometerobjectid3334ResURI": {
+      "get": {
+        "description": " This IPSO Object is used to report the current reading of a gyrometer sensor in 3 axes. It provides tracking of the minimum and maximum angular rate in all 3 axes. An example unit of measure is radians per second.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/interface"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Omaipsogyrometerobjectid3334"
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "interface": {
+      "in": "query",
+      "name": "if",
+      "type": "string",
+      "enum": [
+        "oic.if.s",
+        "oic.if.baseline"
+      ]
+    }
+  },
+  "definitions": {
+    "Omaipsogyrometerobjectid3334": {
+      "properties": {
+        "rt": {
+          "description": "The Resource Type.",
+          "items": {
+            "enum": [
+              "oic.r.o.Gyrometer"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "n": {
+          "$ref": "https://openconnectivityfoundation.github.io/core/schemas/oic.common.properties.core-schema.json#/definitions/n"
+        },
+        "if": {
+          "description": "The OCF Interface set supported by this Resource.",
+          "items": {
+            "enum": [
+              "oic.if.s",
+              "oic.if.baseline"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "X_Value": {
+          "description": "The measured value along the X axis.",
+          "x-label": "X Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Y_Value": {
+          "description": "The measured value along the Y axis.",
+          "x-label": "Y Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Z_Value": {
+          "description": "The measured value along the Z axis.",
+          "x-label": "Z Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Sensor_Units": {
+          "description": "Measurement Units Definition.",
+          "x-label": "Sensor Units",
+          "type": "string",
+          "readOnly": true
+        },
+        "Min_X_Value": {
+          "description": "The minimum measured value along the X axis.",
+          "x-label": "Min X Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Max_X_Value": {
+          "description": "The maximum measured value along the X axis.",
+          "x-label": "Max X Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Min_Y_Value": {
+          "description": "The minimum measured value along the Y axis.",
+          "x-label": "Min Y Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Max_Y_Value": {
+          "description": "The maximum measured value along the Y axis.",
+          "x-label": "Max Y Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Min_Z_Value": {
+          "description": "The minimum measured value along the Z axis.",
+          "x-label": "Min Z Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Max_Z_Value": {
+          "description": "The maximum measured value along the Z axis.",
+          "x-label": "Max Z Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Min_Range_Value": {
+          "description": "The minimum value that can be measured by the sensor.",
+          "x-label": "Min Range Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Max_Range_Value": {
+          "description": "The maximum value that can be measured by the sensor.",
+          "x-label": "Max Range Value",
+          "type": "number",
+          "readOnly": true
+        },
+        "Application_Type": {
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "x-label": "Application Type",
+          "type": "string"
+        },
+        "Timestamp": {
+          "description": "The timestamp of when the measurement was performed.",
+          "x-label": "Timestamp",
+          "x-sdfType": "unix-time",
+          "type": "number",
+          "readOnly": true
+        },
+        "Fractional_Timestamp": {
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "x-label": "Fractional Timestamp",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number",
+          "x-unit": "s",
+          "readOnly": true
+        },
+        "Measurement_Quality_Indicator": {
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "x-label": "Measurement Quality Indicator",
+          "maximum": 23,
+          "minimum": 0,
+          "type": "integer",
+          "readOnly": true
+        },
+        "Measurement_Quality_Level": {
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "x-label": "Measurement Quality Level",
+          "maximum": 100,
+          "minimum": 0,
+          "type": "integer",
+          "readOnly": true
+        }
+      },
+      "type": "object",
+      "required": [
+        "X_Value"
+      ]
+    }
+  }
+}

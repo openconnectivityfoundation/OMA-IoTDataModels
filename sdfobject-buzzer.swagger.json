@@ -1,0 +1,140 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OMA/IPSO Buzzer (Object ID 3338)",
+    "version": "2022-02-22",
+    "license": {
+      "name": "one Data Model License",
+      "url": "BSD-3-Clause",
+      "x-copyright": "Copyright 2019 Open Mobile Alliance."
+    },
+    "termsOfService": "BSD-3-Clause"
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Omaipsobuzzerobjectid3338ResURI": {
+      "get": {
+        "description": " This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm. There is a dimmer control for setting the relative level of the alarm, and an optional duration control to limit the length of time the alarm sounds when turned on. Each time \"true\" is written to the On/Off resource, the alarm will sound again for the configured duration. If no duration is programmed or the setting is \"false\", writing a \"true\" to the On/Off resource will result in the alarm sounding continuously until a \"false\" is written to the On/Off resource.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/interface"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Omaipsobuzzerobjectid3338"
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "interface": {
+      "in": "query",
+      "name": "if",
+      "type": "string",
+      "enum": [
+        "oic.if.s",
+        "oic.if.baseline"
+      ]
+    }
+  },
+  "definitions": {
+    "Omaipsobuzzerobjectid3338": {
+      "properties": {
+        "rt": {
+          "description": "The Resource Type.",
+          "items": {
+            "enum": [
+              "oic.r.o.Buzzer"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "n": {
+          "$ref": "https://openconnectivityfoundation.github.io/core/schemas/oic.common.properties.core-schema.json#/definitions/n"
+        },
+        "if": {
+          "description": "The OCF Interface set supported by this Resource.",
+          "items": {
+            "enum": [
+              "oic.if.s",
+              "oic.if.baseline"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "On_Off": {
+          "description": "On/off control. Boolean value where True is On and False is Off.",
+          "x-label": "On/Off",
+          "type": "boolean"
+        },
+        "Level": {
+          "description": "Used to represent a level control such as audio volume.",
+          "x-label": "Level",
+          "maximum": 100,
+          "minimum": 0,
+          "type": "number",
+          "x-unit": "/100"
+        },
+        "Delay_Duration": {
+          "description": "The duration of the time delay.",
+          "x-label": "Delay Duration",
+          "type": "number",
+          "x-unit": "s"
+        },
+        "Minimum_Off-time": {
+          "description": "The duration of the rearm delay (i.e. the delay from the end of one cycle until the beginning of the next, the inhibit time).",
+          "x-label": "Minimum Off-time",
+          "type": "number",
+          "x-unit": "s"
+        },
+        "Application_Type": {
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "x-label": "Application Type",
+          "type": "string"
+        },
+        "Timestamp": {
+          "description": "The timestamp of when the measurement was performed.",
+          "x-label": "Timestamp",
+          "x-sdfType": "unix-time",
+          "type": "number",
+          "readOnly": true
+        },
+        "Fractional_Timestamp": {
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "x-label": "Fractional Timestamp",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number",
+          "x-unit": "s",
+          "readOnly": true
+        }
+      },
+      "type": "object",
+      "required": [
+        "On_Off",
+        "Minimum_Off-time"
+      ]
+    }
+  }
+}

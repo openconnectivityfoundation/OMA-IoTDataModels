@@ -1,0 +1,150 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OMA/IPSO Digital Input (Object ID 3200)",
+    "version": "2022-02-22",
+    "license": {
+      "name": "one Data Model License",
+      "url": "BSD-3-Clause",
+      "x-copyright": "Copyright 2019 Open Mobile Alliance."
+    },
+    "termsOfService": "BSD-3-Clause"
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Omaipsodigitalinputobjectid3200ResURI": {
+      "get": {
+        "description": " Generic digital input for non-specific sensors",
+        "parameters": [
+          {
+            "$ref": "#/parameters/interface"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Omaipsodigitalinputobjectid3200"
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "interface": {
+      "in": "query",
+      "name": "if",
+      "type": "string",
+      "enum": [
+        "oic.if.s",
+        "oic.if.baseline"
+      ]
+    }
+  },
+  "definitions": {
+    "Omaipsodigitalinputobjectid3200": {
+      "properties": {
+        "rt": {
+          "description": "The Resource Type.",
+          "items": {
+            "enum": [
+              "oic.r.o.Digital_Input"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "n": {
+          "$ref": "https://openconnectivityfoundation.github.io/core/schemas/oic.common.properties.core-schema.json#/definitions/n"
+        },
+        "if": {
+          "description": "The OCF Interface set supported by this Resource.",
+          "items": {
+            "enum": [
+              "oic.if.s",
+              "oic.if.baseline"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "Digital_Input_State": {
+          "description": "The current state of a digital input.",
+          "x-label": "Digital Input State",
+          "type": "boolean",
+          "readOnly": true
+        },
+        "Digital_Input_Counter": {
+          "description": "The cumulative value of active state detected.",
+          "x-label": "Digital Input Counter",
+          "type": "integer",
+          "readOnly": true
+        },
+        "Digital_Input_Polarity": {
+          "description": "The polarity of the digital input as a Boolean (False = Normal, True = Reversed).",
+          "x-label": "Digital Input Polarity",
+          "type": "boolean"
+        },
+        "Digital_Input_Debounce": {
+          "description": "The debounce period in ms.",
+          "x-label": "Digital Input Debounce",
+          "type": "integer",
+          "x-unit": "ms"
+        },
+        "Digital_Input_Edge_Selection": {
+          "description": "The edge selection as an integer (1 = Falling edge, 2 = Rising edge, 3 = Both Rising and Falling edge).",
+          "x-label": "Digital Input Edge Selection",
+          "maximum": 3,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "Application_Type": {
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "x-label": "Application Type",
+          "type": "string"
+        },
+        "Sensor_Type": {
+          "description": "The type of the sensor (for instance PIR type).",
+          "x-label": "Sensor Type",
+          "type": "string",
+          "readOnly": true
+        },
+        "Timestamp": {
+          "description": "The timestamp of when the measurement was performed.",
+          "x-label": "Timestamp",
+          "x-sdfType": "unix-time",
+          "type": "number",
+          "readOnly": true
+        },
+        "Fractional_Timestamp": {
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "x-label": "Fractional Timestamp",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number",
+          "x-unit": "s",
+          "readOnly": true
+        }
+      },
+      "type": "object",
+      "required": [
+        "Digital_Input_State"
+      ]
+    }
+  }
+}

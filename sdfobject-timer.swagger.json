@@ -1,0 +1,152 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OMA/IPSO Timer (Object ID 3340)",
+    "version": "2022-02-22",
+    "license": {
+      "name": "one Data Model License",
+      "url": "BSD-3-Clause",
+      "x-copyright": "Copyright 2019 Open Mobile Alliance."
+    },
+    "termsOfService": "BSD-3-Clause"
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Omaipsotimerobjectid3340ResURI": {
+      "get": {
+        "description": " This IPSO object is used to time events and actions, using patterns common to industrial timers. A write to the trigger resource or On/Off input state change starts the timing operation, and the timer remaining time shows zero when the operation is complete. The patterns supported are One-Shot (mode 1), On-Time or Interval (mode 2), Time delay on pick-up or TDPU (mode 3), and Time Delay on Drop-Out or TDDO (mode 4). Mode 0 disables the timer, so the output follows the input with no delay. A counter is provided to count occurrences of the timer output changing from 0 to 1. Writing a value of zero resets the counter. The Digital Input State resource reports the state of the timer output.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/interface"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Omaipsotimerobjectid3340"
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "interface": {
+      "in": "query",
+      "name": "if",
+      "type": "string",
+      "enum": [
+        "oic.if.s",
+        "oic.if.baseline"
+      ]
+    }
+  },
+  "definitions": {
+    "Omaipsotimerobjectid3340": {
+      "properties": {
+        "rt": {
+          "description": "The Resource Type.",
+          "items": {
+            "enum": [
+              "oic.r.o.Timer"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "n": {
+          "$ref": "https://openconnectivityfoundation.github.io/core/schemas/oic.common.properties.core-schema.json#/definitions/n"
+        },
+        "if": {
+          "description": "The OCF Interface set supported by this Resource.",
+          "items": {
+            "enum": [
+              "oic.if.s",
+              "oic.if.baseline"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "Delay_Duration": {
+          "description": "The duration of the time delay.",
+          "x-label": "Delay Duration",
+          "type": "number",
+          "x-unit": "s"
+        },
+        "Remaining_Time": {
+          "description": "The time remaining in an operation.",
+          "x-label": "Remaining Time",
+          "type": "number",
+          "x-unit": "s",
+          "readOnly": true
+        },
+        "Minimum_Off-time": {
+          "description": "The duration of the rearm delay (i.e. the delay from the end of one cycle until the beginning of the next, the inhibit time).",
+          "x-label": "Minimum Off-time",
+          "type": "number",
+          "x-unit": "s"
+        },
+        "On_Off": {
+          "description": "On/off control. Boolean value where True is On and False is Off.",
+          "x-label": "On/Off",
+          "type": "boolean"
+        },
+        "Digital_Input_Counter": {
+          "description": "The cumulative value of active state detected.",
+          "x-label": "Digital Input Counter",
+          "type": "integer",
+          "readOnly": true
+        },
+        "Cumulative_Time": {
+          "description": "The total time in seconds that the timer input is true. Writing a 0 resets the time.",
+          "x-label": "Cumulative Time",
+          "type": "number",
+          "x-unit": "s"
+        },
+        "Digital_State": {
+          "description": "The current state of the timer output.",
+          "x-label": "Digital State",
+          "type": "boolean",
+          "readOnly": true
+        },
+        "Counter": {
+          "description": "Counts the number of times the timer output transitions from 0 to 1.",
+          "x-label": "Counter",
+          "type": "integer"
+        },
+        "Timer_Mode": {
+          "description": "Type of timer pattern used by the timer. 1: One-shot, 2: On-Time or Interval, 3: Time delay on pick-up, 4: Time Delay on Drop-Out, 0: disables the timer.",
+          "x-label": "Timer Mode",
+          "maximum": 4,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "Application_Type": {
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "x-label": "Application Type",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "required": [
+        "Delay_Duration"
+      ]
+    }
+  }
+}

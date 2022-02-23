@@ -1,0 +1,156 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OMA/IPSO Load Control (Object ID 3310)",
+    "version": "2022-02-22",
+    "license": {
+      "name": "one Data Model License",
+      "url": "BSD-3-Clause",
+      "x-copyright": "Copyright 2019 Open Mobile Alliance."
+    },
+    "termsOfService": "BSD-3-Clause"
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Omaipsoloadcontrolobjectid3310ResURI": {
+      "get": {
+        "description": " This Object is used for demand-response load control and other load control in automation application (not limited to power).",
+        "parameters": [
+          {
+            "$ref": "#/parameters/interface"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Omaipsoloadcontrolobjectid3310"
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "interface": {
+      "in": "query",
+      "name": "if",
+      "type": "string",
+      "enum": [
+        "oic.if.s",
+        "oic.if.baseline"
+      ]
+    }
+  },
+  "definitions": {
+    "Omaipsoloadcontrolobjectid3310": {
+      "properties": {
+        "rt": {
+          "description": "The Resource Type.",
+          "items": {
+            "enum": [
+              "oic.r.o.Load_Control"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "n": {
+          "$ref": "https://openconnectivityfoundation.github.io/core/schemas/oic.common.properties.core-schema.json#/definitions/n"
+        },
+        "if": {
+          "description": "The OCF Interface set supported by this Resource.",
+          "items": {
+            "enum": [
+              "oic.if.s",
+              "oic.if.baseline"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "readOnly": true,
+          "type": "array"
+        },
+        "Event_Identifier": {
+          "description": "The event identifier as a string.",
+          "x-label": "Event Identifier",
+          "type": "string"
+        },
+        "Start_Time": {
+          "description": "Time when the event started.",
+          "x-label": "Start Time",
+          "x-sdfType": "unix-time",
+          "type": "number"
+        },
+        "Duration_In_Min": {
+          "description": "The duration of the event in minutes.",
+          "x-label": "Duration In Min",
+          "type": "integer",
+          "x-unit": "min"
+        },
+        "Criticality_Level": {
+          "description": "The criticality of the event. The device receiving the event will react in an appropriate fashion for the device.",
+          "x-label": "Criticality Level",
+          "maximum": 3,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "Avg_Load_AdjPct": {
+          "description": "Defines the maximum energy usage of the receiving device, as a percentage of the device's normal maximum energy usage.",
+          "x-label": "Avg Load AdjPct",
+          "maximum": 100,
+          "minimum": 0,
+          "type": "integer",
+          "x-unit": "/100"
+        },
+        "Duty_Cycle": {
+          "description": "Defines the duty cycle for the load control event, i.e, what percentage of time the receiving device is allowed to be on.",
+          "x-label": "Duty Cycle",
+          "maximum": 100,
+          "minimum": 0,
+          "type": "integer",
+          "x-unit": "/100"
+        },
+        "Application_Type": {
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "x-label": "Application Type",
+          "type": "string"
+        },
+        "Timestamp": {
+          "description": "The timestamp of when the measurement was performed.",
+          "x-label": "Timestamp",
+          "x-sdfType": "unix-time",
+          "type": "number",
+          "readOnly": true
+        },
+        "Fractional_Timestamp": {
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "x-label": "Fractional Timestamp",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number",
+          "x-unit": "s",
+          "readOnly": true
+        }
+      },
+      "type": "object",
+      "required": [
+        "Event_Identifier",
+        "Start_Time",
+        "Duration_In_Min"
+      ]
+    }
+  }
+}
