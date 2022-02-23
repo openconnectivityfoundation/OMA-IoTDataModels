@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Digital_Input"
+              "oic.r.o.digital.input"
             ],
             "type": "string"
           },

@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Set_Point"
+              "oic.r.o.set.point"
             ],
             "type": "string"
           },

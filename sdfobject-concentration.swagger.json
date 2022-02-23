@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Concentration"
+              "oic.r.o.concentration"
             ],
             "type": "string"
           },

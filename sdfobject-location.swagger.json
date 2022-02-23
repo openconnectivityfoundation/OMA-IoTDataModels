@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Location"
+              "oic.r.o.location"
             ],
             "type": "string"
           },

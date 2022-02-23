@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Power_Control"
+              "oic.r.o.power.control"
             ],
             "type": "string"
           },

@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Actuation"
+              "oic.r.o.actuation"
             ],
             "type": "string"
           },

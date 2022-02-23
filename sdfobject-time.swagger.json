@@ -57,7 +57,7 @@
           "description": "The Resource Type.",
           "items": {
             "enum": [
-              "oic.r.o.Time"
+              "oic.r.o.time"
             ],
             "type": "string"
           },
