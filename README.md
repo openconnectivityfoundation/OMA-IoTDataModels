@@ -13,3 +13,6 @@ main adaptions (additions) are:
 - unit in SDF is converted in OAS to x-unit
 - label in SDF is converted in OAS to x-label
 - sdfType in SDF is converted in OAS to x-sdfType
+
+
+[ocf converted oma resource overview](https://openconnectivityfoundation.github.io/OMA-IoTDataModels/tools/resource.html)
