@@ -1,0 +1,426 @@
+[
+  {
+    "filename": "sdfobject-accelerometer.swagger.json",
+    "rt": [
+      "oic.r.o.accelerometer"
+    ],
+    "title": "OMA/IPSO Accelerometer (Object ID 3313)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-accelerometer.swagger.json"
+  },
+  {
+    "filename": "sdfobject-acidity.swagger.json",
+    "rt": [
+      "oic.r.o.acidity"
+    ],
+    "title": "OMA/IPSO Acidity (Object ID 3326)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-acidity.swagger.json"
+  },
+  {
+    "filename": "sdfobject-actuation.swagger.json",
+    "rt": [
+      "oic.r.o.actuation"
+    ],
+    "title": "OMA/IPSO Actuation (Object ID 3306)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-actuation.swagger.json"
+  },
+  {
+    "filename": "sdfobject-addressable_text_display.swagger.json",
+    "rt": [
+      "oic.r.o.addressable.text.display"
+    ],
+    "title": "OMA/IPSO Addressable Text Display (Object ID 3341)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-addressable_text_display.swagger.json"
+  },
+  {
+    "filename": "sdfobject-altitude.swagger.json",
+    "rt": [
+      "oic.r.o.altitude"
+    ],
+    "title": "OMA/IPSO Altitude (Object ID 3321)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-altitude.swagger.json"
+  },
+  {
+    "filename": "sdfobject-analog_input.swagger.json",
+    "rt": [
+      "oic.r.o.analog.input"
+    ],
+    "title": "OMA/IPSO Analog Input (Object ID 3202)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-analog_input.swagger.json"
+  },
+  {
+    "filename": "sdfobject-analog_output.swagger.json",
+    "rt": [
+      "oic.r.o.analog.output"
+    ],
+    "title": "OMA/IPSO Analog Output (Object ID 3203)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-analog_output.swagger.json"
+  },
+  {
+    "filename": "sdfobject-audio_clip.swagger.json",
+    "rt": [
+      "oic.r.o.audio.clip"
+    ],
+    "title": "OMA/IPSO Audio Clip (Object ID 3339)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-audio_clip.swagger.json"
+  },
+  {
+    "filename": "sdfobject-barometer.swagger.json",
+    "rt": [
+      "oic.r.o.barometer"
+    ],
+    "title": "OMA/IPSO Barometer (Object ID 3315)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-barometer.swagger.json"
+  },
+  {
+    "filename": "sdfobject-bitmap.swagger.json",
+    "rt": [
+      "oic.r.o.bitmap"
+    ],
+    "title": "OMA/IPSO Bitmap (Object ID 3349)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-bitmap.swagger.json"
+  },
+  {
+    "filename": "sdfobject-buzzer.swagger.json",
+    "rt": [
+      "oic.r.o.buzzer"
+    ],
+    "title": "OMA/IPSO Buzzer (Object ID 3338)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-buzzer.swagger.json"
+  },
+  {
+    "filename": "sdfobject-colour.swagger.json",
+    "rt": [
+      "oic.r.o.colour"
+    ],
+    "title": "OMA/IPSO Colour (Object ID 3335)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-colour.swagger.json"
+  },
+  {
+    "filename": "sdfobject-concentration.swagger.json",
+    "rt": [
+      "oic.r.o.concentration"
+    ],
+    "title": "OMA/IPSO Concentration (Object ID 3325)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-concentration.swagger.json"
+  },
+  {
+    "filename": "sdfobject-conductivity.swagger.json",
+    "rt": [
+      "oic.r.o.conductivity"
+    ],
+    "title": "OMA/IPSO Conductivity (Object ID 3327)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-conductivity.swagger.json"
+  },
+  {
+    "filename": "sdfobject-current.swagger.json",
+    "rt": [
+      "oic.r.o.current"
+    ],
+    "title": "OMA/IPSO Current (Object ID 3317)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-current.swagger.json"
+  },
+  {
+    "filename": "sdfobject-depth.swagger.json",
+    "rt": [
+      "oic.r.o.depth"
+    ],
+    "title": "OMA/IPSO Depth (Object ID 3319)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-depth.swagger.json"
+  },
+  {
+    "filename": "sdfobject-digital_input.swagger.json",
+    "rt": [
+      "oic.r.o.digital.input"
+    ],
+    "title": "OMA/IPSO Digital Input (Object ID 3200)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-digital_input.swagger.json"
+  },
+  {
+    "filename": "sdfobject-digital_output.swagger.json",
+    "rt": [
+      "oic.r.o.digital.output"
+    ],
+    "title": "OMA/IPSO Digital Output (Object ID 3201)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-digital_output.swagger.json"
+  },
+  {
+    "filename": "sdfobject-dimmer.swagger.json",
+    "rt": [
+      "oic.r.o.dimmer"
+    ],
+    "title": "OMA/IPSO Dimmer (Object ID 3343)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-dimmer.swagger.json"
+  },
+  {
+    "filename": "sdfobject-direction.swagger.json",
+    "rt": [
+      "oic.r.o.direction"
+    ],
+    "title": "OMA/IPSO Direction (Object ID 3332)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-direction.swagger.json"
+  },
+  {
+    "filename": "sdfobject-distance.swagger.json",
+    "rt": [
+      "oic.r.o.distance"
+    ],
+    "title": "OMA/IPSO Distance (Object ID 3330)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-distance.swagger.json"
+  },
+  {
+    "filename": "sdfobject-energy.swagger.json",
+    "rt": [
+      "oic.r.o.energy"
+    ],
+    "title": "OMA/IPSO Energy (Object ID 3331)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-energy.swagger.json"
+  },
+  {
+    "filename": "sdfobject-frequency.swagger.json",
+    "rt": [
+      "oic.r.o.frequency"
+    ],
+    "title": "OMA/IPSO Frequency (Object ID 3318)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-frequency.swagger.json"
+  },
+  {
+    "filename": "sdfobject-generic_sensor.swagger.json",
+    "rt": [
+      "oic.r.o.generic.sensor"
+    ],
+    "title": "OMA/IPSO Generic Sensor (Object ID 3300)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-generic_sensor.swagger.json"
+  },
+  {
+    "filename": "sdfobject-gyrometer.swagger.json",
+    "rt": [
+      "oic.r.o.gyrometer"
+    ],
+    "title": "OMA/IPSO Gyrometer (Object ID 3334)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-gyrometer.swagger.json"
+  },
+  {
+    "filename": "sdfobject-humidity.swagger.json",
+    "rt": [
+      "oic.r.o.humidity"
+    ],
+    "title": "OMA/IPSO Humidity (Object ID 3304)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-humidity.swagger.json"
+  },
+  {
+    "filename": "sdfobject-illuminance.swagger.json",
+    "rt": [
+      "oic.r.o.illuminance"
+    ],
+    "title": "OMA/IPSO Illuminance (Object ID 3301)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-illuminance.swagger.json"
+  },
+  {
+    "filename": "sdfobject-light_control.swagger.json",
+    "rt": [
+      "oic.r.o.light.control"
+    ],
+    "title": "OMA/IPSO Light Control (Object ID 3311)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-light_control.swagger.json"
+  },
+  {
+    "filename": "sdfobject-load.swagger.json",
+    "rt": [
+      "oic.r.o.load"
+    ],
+    "title": "OMA/IPSO Load (Object ID 3322)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-load.swagger.json"
+  },
+  {
+    "filename": "sdfobject-load_control.swagger.json",
+    "rt": [
+      "oic.r.o.load.control"
+    ],
+    "title": "OMA/IPSO Load Control (Object ID 3310)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-load_control.swagger.json"
+  },
+  {
+    "filename": "sdfobject-location.swagger.json",
+    "rt": [
+      "oic.r.o.location"
+    ],
+    "title": "OMA/IPSO Location (Object ID 3336)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-location.swagger.json"
+  },
+  {
+    "filename": "sdfobject-loudness.swagger.json",
+    "rt": [
+      "oic.r.o.loudness"
+    ],
+    "title": "OMA/IPSO Loudness (Object ID 3324)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-loudness.swagger.json"
+  },
+  {
+    "filename": "sdfobject-magnetometer.swagger.json",
+    "rt": [
+      "oic.r.o.magnetometer"
+    ],
+    "title": "OMA/IPSO Magnetometer (Object ID 3314)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-magnetometer.swagger.json"
+  },
+  {
+    "filename": "sdfobject-multi-state_selector.swagger.json",
+    "rt": [
+      "oic.r.o.multi-state.selector"
+    ],
+    "title": "OMA/IPSO Multi-state Selector (Object ID 3348)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-multi-state_selector.swagger.json"
+  },
+  {
+    "filename": "sdfobject-multiple_axis_joystick.swagger.json",
+    "rt": [
+      "oic.r.o.multiple.axis.joystick"
+    ],
+    "title": "OMA/IPSO Multiple Axis Joystick (Object ID 3345)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-multiple_axis_joystick.swagger.json"
+  },
+  {
+    "filename": "sdfobject-on_off_switch.swagger.json",
+    "rt": [
+      "oic.r.o.on.off.switch"
+    ],
+    "title": "OMA/IPSO On/Off switch (Object ID 3342)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-on_off_switch.swagger.json"
+  },
+  {
+    "filename": "sdfobject-percentage.swagger.json",
+    "rt": [
+      "oic.r.o.percentage"
+    ],
+    "title": "OMA/IPSO Percentage (Object ID 3320)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-percentage.swagger.json"
+  },
+  {
+    "filename": "sdfobject-positioner.swagger.json",
+    "rt": [
+      "oic.r.o.positioner"
+    ],
+    "title": "OMA/IPSO Positioner (Object ID 3337)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-positioner.swagger.json"
+  },
+  {
+    "filename": "sdfobject-power.swagger.json",
+    "rt": [
+      "oic.r.o.power"
+    ],
+    "title": "OMA/IPSO Power (Object ID 3328)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-power.swagger.json"
+  },
+  {
+    "filename": "sdfobject-power_control.swagger.json",
+    "rt": [
+      "oic.r.o.power.control"
+    ],
+    "title": "OMA/IPSO Power Control (Object ID 3312)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-power_control.swagger.json"
+  },
+  {
+    "filename": "sdfobject-power_factor.swagger.json",
+    "rt": [
+      "oic.r.o.power.factor"
+    ],
+    "title": "OMA/IPSO Power Factor (Object ID 3329)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-power_factor.swagger.json"
+  },
+  {
+    "filename": "sdfobject-power_measurement.swagger.json",
+    "rt": [
+      "oic.r.o.power.measurement"
+    ],
+    "title": "OMA/IPSO Power Measurement (Object ID 3305)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-power_measurement.swagger.json"
+  },
+  {
+    "filename": "sdfobject-presence.swagger.json",
+    "rt": [
+      "oic.r.o.presence"
+    ],
+    "title": "OMA/IPSO Presence (Object ID 3302)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-presence.swagger.json"
+  },
+  {
+    "filename": "sdfobject-pressure.swagger.json",
+    "rt": [
+      "oic.r.o.pressure"
+    ],
+    "title": "OMA/IPSO Pressure (Object ID 3323)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-pressure.swagger.json"
+  },
+  {
+    "filename": "sdfobject-push_button.swagger.json",
+    "rt": [
+      "oic.r.o.push.button"
+    ],
+    "title": "OMA/IPSO Push button (Object ID 3347)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-push_button.swagger.json"
+  },
+  {
+    "filename": "sdfobject-rate.swagger.json",
+    "rt": [
+      "oic.r.o.rate"
+    ],
+    "title": "OMA/IPSO Rate (Object ID 3346)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-rate.swagger.json"
+  },
+  {
+    "filename": "sdfobject-set_point.swagger.json",
+    "rt": [
+      "oic.r.o.set.point"
+    ],
+    "title": "OMA/IPSO Set Point (Object ID 3308)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-set_point.swagger.json"
+  },
+  {
+    "filename": "sdfobject-stopwatch.swagger.json",
+    "rt": [
+      "oic.r.o.stopwatch"
+    ],
+    "title": "OMA/IPSO Stopwatch (Object ID 3350)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-stopwatch.swagger.json"
+  },
+  {
+    "filename": "sdfobject-temperature.swagger.json",
+    "rt": [
+      "oic.r.o.temperature"
+    ],
+    "title": "OMA/IPSO Temperature (Object ID 3303)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-temperature.swagger.json"
+  },
+  {
+    "filename": "sdfobject-time.swagger.json",
+    "rt": [
+      "oic.r.o.time"
+    ],
+    "title": "OMA/IPSO Time (Object ID 3333)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-time.swagger.json"
+  },
+  {
+    "filename": "sdfobject-timer.swagger.json",
+    "rt": [
+      "oic.r.o.timer"
+    ],
+    "title": "OMA/IPSO Timer (Object ID 3340)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-timer.swagger.json"
+  },
+  {
+    "filename": "sdfobject-up_down_control.swagger.json",
+    "rt": [
+      "oic.r.o.up.down.control"
+    ],
+    "title": "OMA/IPSO Up/Down Control (Object ID 3344)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-up_down_control.swagger.json"
+  },
+  {
+    "filename": "sdfobject-voltage.swagger.json",
+    "rt": [
+      "oic.r.o.voltage"
+    ],
+    "title": "OMA/IPSO Voltage (Object ID 3316)",
+    "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/sdfobject-voltage.swagger.json"
+  }
+]
