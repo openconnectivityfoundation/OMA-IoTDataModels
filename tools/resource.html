@@ -1,0 +1,69 @@
+<!doctype html>
+
+<!--
+table selection:
+http://stackoverflow.com/questions/36880849/select-a-row-highlight-from-html-table-and-send-values-onclick-of-a-button
+-->
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
+    <title>OCF Resource Type overview</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+<script type="text/javascript"
+        src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript"
+        src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+
+<div class=page>
+
+  <h1>OCF (OMA) Resource Type Overview </h1>
+  <a href="https://openconnectivity.org/"><img src="OCF_POS_4C.png" alt="OCF Logo" width="300" height="64" align="right"></a>
+
+
+  <script type="text/javascript" src="http://sjc-web10-lnx.cisco.com:1086/service.js"></script>
+  <table id="example" class="display" width="100%" cellspacing="0" data-page-length='20'>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Resource Type(s)</th>
+                <th>File</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script>
+        $('#example').DataTable( {
+        "ajax": {
+            "url": "https://openconnectivityfoundation.github.io/OMA-IoTDataModels/tools/oic.oma.resourcemap-content.json",
+            "dataSrc": ""
+        },
+        "columns": [
+            { "data": "title" },
+            { "data": "rt[]" },
+            { "data": "filename" ,
+              "render" : function ( data, type, row ) {
+                //alert (data);
+                //return '<a href="https://github.com/OpenInterConnect/IoTDataModels/blob/master/'+data+'">'+  data  +'</a>';
+                return '<a href="https://openconnectivityfoundation.github.io/OMA-IoTDataModels/'+data+'">'+  data  +'</a>';
+                
+            } }
+        ]
+    } );
+
+
+	</script>
+</div>
