@@ -29,7 +29,7 @@
 #  currently supported github repo: IoTDataModels
 
 
-python3 resource_overview.py --outputfile ./oic.oma.resourcemap-content.json --indir .. 
+python3 resource_overview.py --outputfile ./oic.oma.resourcemap-content.json --indir .. -url_prefix https://openconnectivityfoundation.github.io/OMA-IoTDataModels/
 
 rm -rf IoTDataModels
 rm -rf core

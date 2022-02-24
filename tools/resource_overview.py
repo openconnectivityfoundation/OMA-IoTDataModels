@@ -164,7 +164,7 @@ def get_title(json_data):
     if info is not None:
         return info["title"]
 
-def process_dir(dir):
+def process_dir(dir, url_prefix):
     my_array = []
     swag_files = get_dir_list(dir, ext=".swagger.json")
     for file in swag_files:
@@ -185,6 +185,7 @@ def process_dir(dir):
             entry["rt"] = rt["rt"]
             entry["title"] = title
             entry["filename"] = file
+            entry["url"] = str(url_prefix)+file
             my_array.append(entry)
     
     return my_array
@@ -206,14 +207,16 @@ parser = argparse.ArgumentParser()
 parser.add_argument( "-append"     , "--append"    , help="append to file",  nargs='?', const="", required=False)
 parser.add_argument( "-outputfile" , "--outputfile", help="json output file to be created",   nargs='?', const="")
 parser.add_argument( "-indir" , "--indir", help="input directory",   nargs='?', const="")
+parser.add_argument( "-url_prefix" , "--url_prefix", help="prefix of the url",   nargs='?', const="")
 
 
 args = parser.parse_args()
 
 print("indir         : " + str(args.indir))
 print("outputfile    : " + str(args.outputfile))
+print("url prefix    : " + str(args.url_prefix))
 
-object_array = process_dir(args.indir)
+object_array = process_dir(args.indir, args.url_prefix)
 
 if args.append is not None:
     print("appending")
