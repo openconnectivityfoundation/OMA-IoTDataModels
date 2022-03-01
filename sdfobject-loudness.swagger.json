@@ -4,11 +4,9 @@
     "title": "OMA/IPSO Loudness (Object ID 3324)",
     "version": "2022-02-22",
     "license": {
-      "name": "one Data Model License",
-      "url": "BSD-3-Clause",
+      "name": "BSD-3-Clause",
       "x-copyright": "Copyright 2019 Open Mobile Alliance."
-    },
-    "termsOfService": "BSD-3-Clause"
+    }
   },
   "schemes": [
     "http"

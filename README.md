@@ -14,5 +14,13 @@ main adaptions (additions) are:
 - label in SDF is converted in OAS to x-label
 - sdfType in SDF is converted in OAS to x-sdfType
 
+## License information
+
+Each file has includes the SPDX identifier that indicates the license and a copyright statement:
+
+- license name
+- x-copyright
+
+## more info
 
 [ocf converted oma resource overview](https://openconnectivityfoundation.github.io/OMA-IoTDataModels/tools/resource.html)
